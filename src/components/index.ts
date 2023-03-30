@@ -6,6 +6,7 @@ import Message from './Message';
 import Navbar from './Navbar';
 import Cart from './Cart';
 import ExpandableText from './ExpandableText';
+import Form from './Form';
 
 export {
   ListGroup,
@@ -16,4 +17,5 @@ export {
   Navbar,
   Cart,
   ExpandableText,
+  Form
 };
