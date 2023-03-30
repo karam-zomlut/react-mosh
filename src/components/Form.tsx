@@ -18,7 +18,13 @@ const Form = () => {
     register,
     handleSubmit,
     formState: { errors, isValid },
-  } = useForm<FormData>({ resolver: zodResolver(schema) });
+  } = useForm<FormData>({
+    resolver: zodResolver(schema),
+    defaultValues: {
+      name: '',
+      age: 0,
+    },
+  });
 
   const onSubmit = (data: FieldValues) => console.log(data);
 
@@ -32,7 +38,7 @@ const Form = () => {
           {...register('name')}
           id='name'
           type='text'
-          className={`form-control ${errors.name?.type ? 'is-invalid' : ''}`}
+          className={`form-control ${errors.name ? 'is-invalid' : ''}`}
         />
         {errors.name && (
           <p className='invalid-feedback'>{errors.name.message}</p>
@@ -46,7 +52,7 @@ const Form = () => {
           {...register('age', { valueAsNumber: true })}
           id='age'
           type='number'
-          className={`form-control ${errors.age?.type ? 'is-invalid' : ''}`}
+          className={`form-control ${errors.age ? 'is-invalid' : ''}`}
         />
         {errors.age && <p className='invalid-feedback'>{errors.age.message}</p>}
       </div>
