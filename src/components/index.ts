@@ -7,6 +7,7 @@ import Navbar from './Navbar';
 import Cart from './Cart';
 import ExpandableText from './ExpandableText';
 import Form from './Form';
+import ProductList from './ProductList';
 
 export {
   ListGroup,
@@ -18,4 +19,5 @@ export {
   Cart,
   ExpandableText,
   Form,
+  ProductList,
 };
