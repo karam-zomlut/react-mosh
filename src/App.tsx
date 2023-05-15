@@ -5,10 +5,8 @@ import { useUsers } from './hooks';
 
 function App() {
   const { users, isLoading, setUsers, setError, error } = useUsers();
-  // add a new user
   const addUser = () => {
     const originalUsers = [...users];
-    // add
     const newUser = {
       id: Date.now(),
       name: 'New User',
