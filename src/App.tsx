@@ -8,6 +8,7 @@ function App() {
   // add a new user
   const addUser = () => {
     const originalUsers = [...users];
+    // add
     const newUser = {
       id: Date.now(),
       name: 'New User',
